@@ -1,57 +1,42 @@
-const soccerTeams = [
-  {
-    nome: "Real Madrid",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Milan",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Manchester City",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Napoli",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Juventus",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Inter",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Chelsea",
-    punteggio: 0,
-    victims: 0,
-  },
-  {
-    nome: "Arsenal",
-    punteggio: 0,
-    victims: 0,
-  },
+let students = [
+ { name: "Marco", id: 213, grades: 78 },
+ { name: "Paola", id: 110, grades: 96 },
+ { name: "Andrea", id: 250, grades: 48 },
+ { name: "Gaia", id: 145, grades: 74 },
+ { name: "Luigi", id: 196, grades: 68 },
+ { name: "Piero", id: 102, grades: 50 },
+ { name: "Francesca", id: 120, grades: 84 },
 ];
 
-let displayVictims = [];
+// Esercizio 1
 
-for (let i = 0; i < soccerTeams.length; i++) {
-  soccerTeams[i].punteggio = Math.floor(Math.random() * 100) + 1;
-  soccerTeams[i].victims = Math.floor(Math.random() * 50) + 1;
-  let { nome, victims } = soccerTeams[i];
-  displayVictims.push({
-    nome, victims,
-  });
+const targhetteArray = [];
+
+students.forEach((name, i) => {
+let capitalName = (students[i].name).toUpperCase();
+targhetteArray.push(capitalName);
+});
+
+console.table(targhetteArray)
+
+// Esercizio 2
+
+const goodGrades = students.filter((grades, i) => {
+if (students[i].grades >= 70) {
+return true;
 }
+});
 
-console.table(displayVictims)
+console.table(goodGrades);
 
 
+// Esercizio 3
+
+const raccomandati = students.filter((grades, i) => {
+ if (students[i].grades >= 70 && students[i].id >= 120) {
+ return true;
+ }
+ });
+
+ console.table(raccomandati);
+ 
