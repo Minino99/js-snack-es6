@@ -21,12 +21,12 @@ console.table(targhetteArray);
 
 // Esercizio 2
 
-const goodGrades = students.filter((studente, i) => studente[i].grades >= 70);
+const goodGrades = students.filter((studente, i) => studente.grades >= 70);
 
 console.table(goodGrades);
 
 // Esercizio 3
 
-const raccomandati = students.filter((studente, i) => studente[i].grades >= 70 && studente[i].id >= 120);
+const raccomandati = students.filter((studente, i) => studente.grades >= 70 && studente.id >= 120);
 
 console.table(raccomandati);
