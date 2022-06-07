@@ -12,8 +12,8 @@ let students = [
 
 const targhetteArray = [];
 
-students.forEach((studente, i) => {
-  let capitalName = studente[i].name.toUpperCase();
+students.forEach((studente) => {
+  let capitalName = studente.name.toUpperCase();
   targhetteArray.push(capitalName);
 });
 
@@ -21,12 +21,12 @@ console.table(targhetteArray);
 
 // Esercizio 2
 
-const goodGrades = students.filter((studente, i) => studente.grades >= 70);
+const goodGrades = students.filter((studente) => studente.grades >= 70);
 
 console.table(goodGrades);
 
 // Esercizio 3
 
-const raccomandati = students.filter((studente, i) => studente.grades >= 70 && studente.id >= 120);
+const raccomandati = students.filter((studente) => studente.grades >= 70 && studente.id >= 120);
 
 console.table(raccomandati);
