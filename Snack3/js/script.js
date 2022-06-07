@@ -11,11 +11,8 @@ myArray.forEach((nome, i) => {
 
 console.table(newArray)
 
+// Creiamo un nuovo array contenente i valori che hanno la posizione compresa tra i numeri minNumber e maxNumber.
 
-const generatedArray = myArray.filter((nome, i)=> {
-  if (i >= minNumber - 1 && i <= maxNumber - 1){
-    return nome
-  }
-});
+const generatedArray = myArray.filter((nome, i) => i >= minNumber - 1 && i <= maxNumber - 1);
 
 console.table(generatedArray)
